@@ -1,34 +1,25 @@
-﻿using Microsoft.Xna.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
-namespace DuckHunt
+public class SpriteGameObject : GameObject
 {
-    class SpriteGameObject : GameObject
+    Texture2D sprite;
+    public Rectangle rectangle;
+
+    public SpriteGameObject(Texture2D sprite, Rectangle rectangle)
     {
-        public Vector2 drawOffset;
-        public float depth;
+        this.sprite = sprite;
+        this.rectangle = rectangle;
+    }
 
-        public SpriteGameObject()
-        {
-
-        }
-
-        public void Draw()
-        {
-
-        }
-
-        public void Depth()
-        {
-
-            //treeDrawZ = (position.Y - 720) / 360 * 0.8f + 0.2f;
-
-            depth = 1 - ((position.Y - 720)/360);
-            //depth = Math.Abs(depth);
-        }
+    public virtual void Draw(SpriteBatch s)
+    {
+        s.Draw(sprite, rectangle, Color.White);
     }
 }

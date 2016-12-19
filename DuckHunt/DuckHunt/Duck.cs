@@ -1,52 +1,73 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Content;
-using System;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 
-
-namespace DuckHunt
+abstract class Duck : SpriteGameObject
 {
-    class Duck
+    protected Vector2 direction;
+
+    protected Vector2 screen;
+
+    public bool isAlive;
+
+    public float depth;
+
+    protected static Random random;
+
+    public Duck(Texture2D sprite, Rectangle rectangle, float depth) : base(sprite, rectangle)
     {
+        isAlive = true;
 
-        Random r = new Random();
-        Vector2 position = new Vector2();
-        Vector2 velocity = new Vector2();
-        public Rectangle Hitbox = new Rectangle();
-        Texture2D eend;
-        int timeAlive;
+        this.depth = depth;
 
-        public Duck(Texture2D tex)
-        { 
-            this.eend = tex;
-            Hitbox = new Rectangle((int)position.X, (int)position.Y, tex.Width, tex.Height);
-            Reset();
+        random = new Random();
+
+        direction = new Vector2(random.Next(-100, 100), random.Next(-100, 100));
+        direction.Normalize();
+    }
+
+    public virtual void Update(MouseState previousMouseState, MouseState newMouseState)
+    {
+        rectangle.X += (int)direction.X;
+        rectangle.Y += (int)direction.Y;
+
+        if(isDuckHit(previousMouseState, newMouseState))
+        {
+            isAlive = false;
         }
 
-
-        public void Update(GameTime gametime)
+        if (rectangle.X + rectangle.Width > screen.X || rectangle.X < 0)
         {
-            position += velocity;
-            Hitbox.X = (int)position.X;
-            Hitbox.Y = (int)position.Y;
-            if (timeAlive == 120)
-            { Reset(); }
-            timeAlive++;
+            direction.X *= -1;
         }
-
-        public void Draw(SpriteBatch spriteBatch)
+        if (rectangle.Y + rectangle.Height > screen.Y || rectangle.Y < 0)
         {
-            spriteBatch.Draw(eend, position, Color.White);
-
+            direction.Y *= -1;
         }
+    }
 
-        public void Reset()
+    public override void Draw(SpriteBatch s)
+    {
+        base.Draw(s);
+    }
+
+    public bool isDuckHit(MouseState previousMouseState, MouseState newMouseState)
+    {
+        if (newMouseState.LeftButton == ButtonState.Pressed && previousMouseState.LeftButton == ButtonState.Released
+            && newMouseState.Position.X > rectangle.X && newMouseState.Position.X < rectangle.X + rectangle.Width
+            && newMouseState.Position.Y > rectangle.Y && newMouseState.Position.Y < rectangle.Y + rectangle.Height)
         {
-            position.X = r.Next(0, 640);
-            position.Y = r.Next(0, 480);
-            velocity.X = (float)r.NextDouble() * 4 - 2;
-            velocity.Y = (float)r.NextDouble() * 4 - 2;
-            timeAlive = 0;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
+
