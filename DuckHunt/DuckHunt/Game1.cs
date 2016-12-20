@@ -69,7 +69,7 @@ namespace DuckHunt
                 Exit();
 
             // TODO: Add your update logic here
-            menu.Update();
+            menu.Update(gameTime);
 
             base.Update(gameTime);
         }

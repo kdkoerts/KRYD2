@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Input;
 
 public class SpriteGameObject : GameObject
 {
-    Texture2D sprite;
+    protected Texture2D sprite;
     public Rectangle rectangle;
 
     public SpriteGameObject(Texture2D sprite, Rectangle rectangle)

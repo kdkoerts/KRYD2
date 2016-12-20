@@ -57,7 +57,7 @@ public class Menu
         font = game.Content.Load<SpriteFont>("font");
     }
 
-    public void Update()
+    public void Update(GameTime gameTime)
     {
         previousGameState = currentGameState;
 
@@ -108,7 +108,7 @@ public class Menu
 
         if(currentGameState == GameStates.Playing)
         {
-            gameWorld.Update();
+            gameWorld.Update(gameTime);
         }
     }
 

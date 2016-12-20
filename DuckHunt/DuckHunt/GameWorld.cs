@@ -35,14 +35,14 @@ class GameWorld
         AddDucks(1);
     }
 
-    public void Update()
+    public void Update(GameTime gameTime)
     {
         previousMouseState = newMouseState;
         newMouseState = Mouse.GetState();
 
         foreach (Duck d in duckList)
         {
-            d.Update(previousMouseState, newMouseState);
+            d.Update(previousMouseState, newMouseState, gameTime);
         }
 
         for(int i = duckList.Count; i > 0; i--)
@@ -92,7 +92,7 @@ class GameWorld
         for(int i = 0; i < n; i++)
         {
             float depth = (float)random.NextDouble();
-            duckList.Add(new BlueDuck(game.Content.Load<Texture2D>("blueDuck"), new Rectangle(random.Next(0, (int)screen.X - 50), 250, 50, 50), screen, depth));
+            duckList.Add(new BlackDuck(game.Content.Load<Texture2D>("blackDuckAnimation"), new Rectangle(random.Next(0, (int)screen.X - 50), 250, 50, 50), screen, depth, 3));
         }
 
         duckList.Sort((x, y) => x.depth.CompareTo(y.depth));

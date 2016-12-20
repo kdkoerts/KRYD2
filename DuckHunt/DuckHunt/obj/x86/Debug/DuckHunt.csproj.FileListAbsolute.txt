@@ -31,3 +31,4 @@ C:\Users\User\documents\visual studio 2015\Projects\DuckHunt\DuckHunt\bin\Window
 C:\Users\User\documents\visual studio 2015\Projects\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\redDuck.png
 C:\Users\User\documents\visual studio 2015\Projects\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\tree.png
 C:\Users\User\Documents\Visual Studio 2015\Projects\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\background.png
+C:\Users\User\documents\visual studio 2015\Projects\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\blackDuckAnimation.png

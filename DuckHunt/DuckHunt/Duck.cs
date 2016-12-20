@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-abstract class Duck : SpriteGameObject
+abstract class Duck : AnimatedSpriteGameObject
 {
     protected Vector2 direction;
 
@@ -19,7 +19,7 @@ abstract class Duck : SpriteGameObject
 
     protected static Random random;
 
-    public Duck(Texture2D sprite, Rectangle rectangle, float depth) : base(sprite, rectangle)
+    public Duck(Texture2D sprite, Rectangle rectangle, float depth, int frames) : base(sprite, rectangle, frames)
     {
         isAlive = true;
 
@@ -31,7 +31,7 @@ abstract class Duck : SpriteGameObject
         direction.Normalize();
     }
 
-    public virtual void Update(MouseState previousMouseState, MouseState newMouseState)
+    public virtual void Update(MouseState previousMouseState, MouseState newMouseState, GameTime gameTime)
     {
         rectangle.X += (int)direction.X;
         rectangle.Y += (int)direction.Y;
@@ -49,6 +49,8 @@ abstract class Duck : SpriteGameObject
         {
             direction.Y *= -1;
         }
+
+        base.Update(gameTime);
     }
 
     public override void Draw(SpriteBatch s)
