@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Input;
 
 abstract class Duck : AnimatedSpriteGameObject
 {
-    protected Vector2 direction;
+    //protected Vector2 direction;
 
     protected Vector2 screen;
 
@@ -18,6 +18,8 @@ abstract class Duck : AnimatedSpriteGameObject
     public float depth;
 
     protected static Random random;
+
+    int timeAlive;
 
     public Duck(Texture2D sprite, Rectangle rectangle, float depth, int frames) : base(sprite, rectangle, frames)
     {
@@ -39,17 +41,25 @@ abstract class Duck : AnimatedSpriteGameObject
         if(isDuckHit(previousMouseState, newMouseState))
         {
             isAlive = false;
+            timeAlive = 0;
         }
 
-        if (rectangle.X + rectangle.Width > screen.X || rectangle.X < 0)
+        if (timeAlive >= 270 && rectangle.X + rectangle.Width > screen.X + 20 || rectangle.X < -20 || rectangle.Y + rectangle.Height > screen.Y + 20 || rectangle.Y < -20)
+        {
+            isAlive = false;
+            timeAlive = 0;
+        }
+
+        if (rectangle.X + rectangle.Width > screen.X || rectangle.X < 0 && timeAlive <= 270)
         {
             direction.X *= -1;
         }
-        if (rectangle.Y + rectangle.Height > screen.Y || rectangle.Y < 0)
+        if (rectangle.Y + rectangle.Height > screen.Y || rectangle.Y < 0 && timeAlive <= 270)
         {
             direction.Y *= -1;
         }
 
+        timeAlive++;
         base.Update(gameTime);
     }
 

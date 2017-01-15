@@ -32,3 +32,37 @@ C:\Users\User\documents\visual studio 2015\Projects\DuckHunt\DuckHunt\bin\Window
 C:\Users\User\documents\visual studio 2015\Projects\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\tree.png
 C:\Users\User\Documents\Visual Studio 2015\Projects\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\background.png
 C:\Users\User\documents\visual studio 2015\Projects\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\blackDuckAnimation.png
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\blackDuckAnimation.png
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\blackDuck.png
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\blueDuck.png
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\background.png
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\tree.png
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\button.png
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\duckhuntlogo.png
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\redDuck.png
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\font.xnb
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\DuckHunt.exe
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\DuckHunt.pdb
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.RawInput.dll
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.RawInput.xml
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\obj\x86\Debug\DuckHunt.csprojResolveAssemblyReference.cache
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\obj\x86\Debug\DuckHunt.exe
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\obj\x86\Debug\DuckHunt.pdb
