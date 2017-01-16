@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Input;
 
 class RedDuck : Duck
 {
-    public RedDuck(Texture2D sprite, Rectangle rectangle, Vector2 screen, float depth, int frames) : base(sprite, rectangle, depth, frames)
+    public RedDuck(Texture2D sprite, Rectangle rectangle, Vector2 screen, float depth, int frames) : base(sprite, rectangle, depth, frames, 1500)
     {
         this.screen = screen;
 

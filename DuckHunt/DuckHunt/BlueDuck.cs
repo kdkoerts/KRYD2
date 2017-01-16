@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Input;
 
 class BlueDuck : Duck
 {
-    public BlueDuck(Texture2D sprite, Rectangle rectangle, Vector2 screen, float depth, int frames) : base(sprite, rectangle, depth, frames)
+    public BlueDuck(Texture2D sprite, Rectangle rectangle, Vector2 screen, float depth, int frames) : base(sprite, rectangle, depth, frames, 1000)
     {
         this.screen = screen;
 
