@@ -8,16 +8,20 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 class GameWorld
 {
+    static readonly int MaxParticles = 1000;
     Game game;
 
     List<Duck> duckList;
     List<Tree> treeList;
+    Particle[] particleList = new Particle[MaxParticles];
 
     MouseState previousMouseState, newMouseState;
 
     Vector2 screen;
 
     Random random;
+
+    int aantallevenden = 0;
 
     public GameWorld(Game game, Vector2 screen)
     {
@@ -33,6 +37,26 @@ class GameWorld
         AddTrees(10);
 
         AddDucks(1);
+    }
+
+    public void Add(Particle part)
+    {
+        if (MaxParticles != aantallevenden)
+        {
+            particleList[aantallevenden] = part;
+            aantallevenden++;
+        }
+    }
+
+    public void RemoveParticles(int amount)
+    {
+        if (amount > aantallevenden)
+            amount = aantallevenden;
+        for (int i=0; i<amount && i+amount < aantallevenden; ++i)
+        {
+            particleList[i] = particleList[i + amount];
+        }
+        aantallevenden -= amount;
     }
 
     public void Update(GameTime gameTime)
@@ -57,7 +81,26 @@ class GameWorld
         {
             AddDucks(1);
         }
-    }
+        // Particle dingen
+        for (int n = 0; n < aantallevenden;)
+        {
+            if (particleList[n].levensduur >= 0)
+            {
+                particleList[n].Update();
+                n++;
+            }
+            else
+            {
+                aantallevenden -= 1;
+                particleList[n] = particleList[aantallevenden];
+            }
+        }
+
+        foreach(Tree t in treeList)
+        {
+            t.Update();
+        }
+   }
 
     public void Draw(SpriteBatch spriteBatch)
     {
@@ -67,6 +110,10 @@ class GameWorld
         {
             t.Draw(spriteBatch);
         }
+
+        // Particle dingen
+        for (int n = 0; n < aantallevenden; n++)
+            particleList[n].Draw(spriteBatch);
 
         foreach (Duck d in duckList)
         {
@@ -81,7 +128,7 @@ class GameWorld
             float depth = 0.7f + 0.3f * (float)random.NextDouble();
             float x = (float)random.NextDouble();
             Rectangle rectangle = new Rectangle((int)(x * (screen.X - 150)), (int)(depth * (screen.Y - 450)), (int)(depth * 150), (int)(depth * 400));
-            treeList.Add(new Tree(game.Content.Load<Texture2D>("tree"), rectangle, depth));
+            treeList.Add(new Tree(this, game.Content.Load<Texture2D>("tree"), game.Content.Load<Texture2D>("blad"), rectangle, depth));
         }
 
         treeList.Sort((x, y) => x.depth.CompareTo(y.depth));

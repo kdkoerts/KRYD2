@@ -66,3 +66,4 @@ C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\SharpD
 C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\obj\x86\Debug\DuckHunt.csprojResolveAssemblyReference.cache
 C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\obj\x86\Debug\DuckHunt.exe
 C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\obj\x86\Debug\DuckHunt.pdb
+C:\Users\Kevin\Documents\KRYDDEMO\DuckHunt\DuckHunt\bin\Windows\x86\Debug\Content\blad.png

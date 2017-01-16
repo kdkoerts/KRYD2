@@ -41,11 +41,13 @@
     <Compile Include="AnimatedSpriteGameObject.cs" />
     <Compile Include="BlackDuck.cs" />
     <Compile Include="BlueDuck.cs" />
+    <Compile Include="Bullets.cs" />
     <Compile Include="Button.cs" />
     <Compile Include="Duck.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="GameWorld.cs" />
     <Compile Include="Menu.cs" />
+    <Compile Include="Particle.cs" />
     <Compile Include="RedDuck.cs" />
     <Compile Include="SpriteGameObject.cs" />
     <Compile Include="Game1.cs" />
@@ -67,12 +69,17 @@
     <Content Include="Content\blackDuck.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\blad.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\blueDuck.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\bullet already shot.png" />
+    <Content Include="Content\bullet left.png" />
     <Content Include="Content\tree.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
