@@ -84,7 +84,7 @@ class GameWorld
         // Particle dingen
         for (int n = 0; n < aantallevenden;)
         {
-            if (particleList[n].levensduur >= 0)
+            if (particleList[n].lifespan >= 0)
             {
                 particleList[n].Update();
                 n++;
@@ -111,7 +111,7 @@ class GameWorld
             t.Draw(spriteBatch);
         }
 
-        // Particle dingen
+        // Particle things
         for (int n = 0; n < aantallevenden; n++)
             particleList[n].Draw(spriteBatch);
 
@@ -128,7 +128,7 @@ class GameWorld
             float depth = 0.7f + 0.3f * (float)random.NextDouble();
             float x = (float)random.NextDouble();
             Rectangle rectangle = new Rectangle((int)(x * (screen.X - 150)), (int)(depth * (screen.Y - 450)), (int)(depth * 150), (int)(depth * 400));
-            treeList.Add(new Tree(this, game.Content.Load<Texture2D>("tree"), game.Content.Load<Texture2D>("blad"), rectangle, depth));
+            treeList.Add(new Tree(this, game.Content.Load<Texture2D>("tree"), game.Content.Load<Texture2D>("leaf"), rectangle, depth));
         }
 
         treeList.Sort((x, y) => x.depth.CompareTo(y.depth));

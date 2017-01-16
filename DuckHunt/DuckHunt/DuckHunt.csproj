@@ -69,7 +69,7 @@
     <Content Include="Content\blackDuck.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\blad.png">
+    <Content Include="Content\leaf.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\blueDuck.png">

@@ -8,35 +8,35 @@ using Microsoft.Xna.Framework.Graphics;
 
     public struct Particle
     {
-        Vector2 snelheid;
-        Vector2 acceleratie;
-        public int levensduur;
-        Color kleur;
+        Vector2 velocity;
+        Vector2 acceleration;
+        public int lifespan;
+        Color color;
         Texture2D texture;
-        Vector2 locatie;
+        Vector2 location;
 
         public static readonly Random Rnd = new Random();
 
-        public Particle(Vector2 snelheid, Vector2 acceleratie, int levensduur, Color kleur, Texture2D texture, Vector2 locatie)
+        public Particle(Vector2 velocity, Vector2 acceleration, int lifespan, Color color, Texture2D texture, Vector2 location)
         {
-            this.snelheid = snelheid;
-            this.acceleratie = acceleratie;
-            this.levensduur = levensduur;
-            this.kleur = kleur;
+            this.velocity = velocity;
+            this.acceleration = acceleration;
+            this.lifespan = lifespan;
+            this.color = color;
             this.texture = texture;
-            this.locatie = locatie;
+            this.location = location;
         }
 
         public void Update()
         {
-            snelheid += acceleratie;
-            locatie += snelheid;
-            levensduur -= 1;
+            velocity += acceleration;
+            location += velocity;
+            lifespan -= 1;
         }
 
         public void Draw(SpriteBatch s)
         {
-            s.Draw(texture, locatie, kleur);
+            s.Draw(texture, location, color);
         }
     }
 
