@@ -23,8 +23,6 @@ abstract class Duck : AnimatedSpriteGameObject
 
     int value;
 
-    public bool isHit;
-
     public Duck(Texture2D sprite, Rectangle rectangle, float depth, int frames, int value) : base(sprite, rectangle, frames)
     {
         isAlive = true;
@@ -37,8 +35,6 @@ abstract class Duck : AnimatedSpriteGameObject
         direction.Normalize();
 
         this.value = value;
-
-        isHit = false;
     }
 
     public virtual void Update(MouseState previousMouseState, MouseState newMouseState, GameTime gameTime)
@@ -83,7 +79,6 @@ abstract class Duck : AnimatedSpriteGameObject
             && newMouseState.Position.Y > rectangle.Y && newMouseState.Position.Y < rectangle.Y + rectangle.Height)
         {
             return true;
-            isHit = true;
         }
         else
         {
