@@ -11,9 +11,21 @@ abstract class Duck : AnimatedSpriteGameObject
     static Random random;
     private Vector2 screen;
 
+    private int timeAlive;
     private bool isAlive;
+    private bool isShot;
+    private int hitTime;
 
-    public Duck(Texture2D sprite, Rectangle rectangle, int frames, float depth, Vector2 screen) : base(sprite, rectangle, frames, depth)
+    private Texture2D deadDuck;
+    private Texture2D fallingDuck;
+
+    private bool removableDuck;
+    public bool RemovableDuck
+    {
+        get { return removableDuck; }
+    }
+
+    public Duck(Texture2D sprite, Texture2D deadDuck, Texture2D fallingDuck, Rectangle rectangle, int frames, float depth, Vector2 screen) : base(sprite, rectangle, frames, depth)
     {
         random = new Random();
 
@@ -21,7 +33,15 @@ abstract class Duck : AnimatedSpriteGameObject
 
         this.screen = screen;
 
+        this.deadDuck = deadDuck;
+
+        this.fallingDuck = fallingDuck;
+
+        removableDuck = false;
+
         RandomDirection();
+
+        hitTime = 1000;
     }
 
     public bool IsAlive
@@ -70,20 +90,74 @@ abstract class Duck : AnimatedSpriteGameObject
         }
     }
 
+    public void Flee()
+    {
+        if (rectangle.X < screen.X / 2)
+        {
+            Direction = new Vector2(random.Next(-20, 0), random.Next(-20, 0));
+        }
+        else
+        {
+            Direction = new Vector2(random.Next(0, 20), random.Next(-20, 0));
+        }
+        if (rectangle.X + rectangle.Width > screen.X + 10 || rectangle.X < -10)
+        {
+            removableDuck = true;
+
+        }
+        Direction.Normalize();
+        Direction *= 2;
+    }
+
     public virtual void Update(GameTime gameTime, InputHandler inputHandler)
     {
         base.Update(gameTime);
-
-        StayOnScreen();
+        if(timeAlive < 300 && !isShot)
+        {
+            StayOnScreen();
+        }
+        else if(!isShot)
+        {
+            Flee();
+        }
 
         if (isHit(inputHandler))
         {
             isAlive = false;
+            isShot = true;
+            Direction = Vector2.Zero;
         }
+        if (isShot)
+        {
+            hitTime -= gameTime.ElapsedGameTime.Milliseconds;
+            if (hitTime <= 0)
+            {
+                Direction = new Vector2(0, 10);
+            }
+            if (rectangle.Y > screen.Y)
+            {
+                removableDuck = true;
+            }
+        }
+        timeAlive++;
     }
 
     public override void Draw(SpriteBatch s)
     {
-        base.Draw(s);
+        if (isAlive)
+        {
+            base.Draw(s);
+        }
+        else
+        {
+            if (hitTime > 0)
+            {
+                s.Draw(deadDuck, rectangle, Color.White);
+            }
+            else
+            {
+                s.Draw(fallingDuck, rectangle, Color.White);
+            }
+        }
     }
 }

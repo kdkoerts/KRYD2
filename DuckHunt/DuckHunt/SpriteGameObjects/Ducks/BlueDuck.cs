@@ -8,7 +8,8 @@ using Microsoft.Xna.Framework.Graphics;
 
 class BlueDuck : Duck
 {
-    public BlueDuck(Rectangle rectangle, Game1 game, float depth, Vector2 screen) : base(game.Content.Load<Texture2D>("blackDuckAnimation"), rectangle, 3, depth, screen)
+    public BlueDuck(Rectangle rectangle, Game1 game, float depth, Vector2 screen) : 
+        base(game.Content.Load<Texture2D>("blueDuckAnimation"), game.Content.Load<Texture2D>("deadDuckBlue"), game.Content.Load<Texture2D>("fallingDuckBlue"), rectangle, 3, depth, screen)
     {
         Direction *= 3f;
     }

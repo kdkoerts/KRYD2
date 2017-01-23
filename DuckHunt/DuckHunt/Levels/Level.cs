@@ -67,7 +67,7 @@ class Level
 
         for (int i = duckList.Count; i > 0; i--)
         {
-            if (!duckList.ElementAt<Duck>(i - 1).IsAlive)
+            if (duckList.ElementAt<Duck>(i - 1).RemovableDuck)
             {
                 duckList.RemoveAt(i - 1);
                 removedDucks++;

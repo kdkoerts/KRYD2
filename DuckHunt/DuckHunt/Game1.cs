@@ -11,7 +11,7 @@ public class Game1 : Game
     SpriteBatch spriteBatch;
 
     GameStateManager gameStateManager;
-    public readonly Vector2 screen = new Vector2(1920, 1080);
+    public readonly Vector2 screen = new Vector2(1366, 768);
 
     public Game1()
     {
