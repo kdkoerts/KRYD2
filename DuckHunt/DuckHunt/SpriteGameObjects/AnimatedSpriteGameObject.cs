@@ -25,7 +25,7 @@ class AnimatedSpriteGameObject : SpriteGameObject
         //update frameTime and check if enough time has passed to change to the next animation frame
         frameTime += gameTime.ElapsedGameTime.Milliseconds;
 
-        if (frameTime > 400)
+        if (frameTime > 500)
         {
             currentFrame++;
 

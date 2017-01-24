@@ -17,11 +17,15 @@ class Original : Level
     //round screen displays current round
     RoundScreen roundScreen;
 
+    //score screen displays current score
+    ScoreScreen scoreScreen;
+
     public Original(Game1 game) : base(game)
     {
         bulletScreen = new BulletScreen(game);
         hitScreen = new HitScreen(game);
         roundScreen = new RoundScreen(game);
+        scoreScreen = new ScoreScreen(game);
 
         AddDucks(1);
     }
@@ -33,6 +37,7 @@ class Original : Level
         bulletScreen.Update(gameTime, inputHandler);
         hitScreen.Update(gameTime);
         roundScreen.Update(gameTime);
+        scoreScreen.Update(gameTime);
     }
 
     public override void Draw(SpriteBatch s)
@@ -42,5 +47,6 @@ class Original : Level
         bulletScreen.Draw(s);
         hitScreen.Draw(s);
         roundScreen.Draw(s);
+        scoreScreen.Draw(s);
     }
 }

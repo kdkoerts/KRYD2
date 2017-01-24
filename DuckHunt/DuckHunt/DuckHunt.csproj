@@ -38,7 +38,6 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Dog.cs" />
     <Compile Include="GameStateManager.cs" />
     <Compile Include="GameStates\GameModeMenu.cs" />
     <Compile Include="GameStates\CalibrationMode.cs" />
@@ -59,6 +58,7 @@
     <Compile Include="SpriteGameObjects\Ducks\RedDuck.cs" />
     <Compile Include="SpriteGameObjects\Screens\HitScreen.cs" />
     <Compile Include="SpriteGameObjects\Screens\RoundScreen.cs" />
+    <Compile Include="SpriteGameObjects\Screens\ScoreScreen.cs" />
     <Compile Include="SpriteGameObjects\SpriteGameObject.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
@@ -90,9 +90,6 @@
     <Content Include="Content\background.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\blueDuckAnimation.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Content\deadDuckBlack.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -100,27 +97,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\deadDuckRed.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\dogBlackDuck.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\dogBlueDuck.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\dogLaugh.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\dogRedDuck.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\duckFleeBlack.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\duckFleeBlue.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\duckFleeRed.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\duckGreen.png">
@@ -138,7 +114,7 @@
     <Content Include="Content\fallingDuckRed.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\redDuckAnimation.png">
+    <Content Include="Content\score screen.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\usedBullet.png">
