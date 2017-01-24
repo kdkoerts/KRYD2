@@ -18,6 +18,7 @@ abstract class Duck : AnimatedSpriteGameObject
 
     private Texture2D deadDuck;
     private Texture2D fallingDuck;
+    private Texture2D fleeingDuck;
 
     private bool removableDuck;
     public bool RemovableDuck
@@ -25,13 +26,15 @@ abstract class Duck : AnimatedSpriteGameObject
         get { return removableDuck; }
     }
 
-    public Duck(Texture2D sprite, Texture2D deadDuck, Texture2D fallingDuck, Rectangle rectangle, int frames, float depth, Vector2 screen) : base(sprite, rectangle, frames, depth)
+    public Duck(Texture2D sprite, Texture2D fleeingDuck, Texture2D deadDuck, Texture2D fallingDuck, Rectangle rectangle, int frames, float depth, Vector2 screen) : base(sprite, rectangle, frames, depth)
     {
         random = new Random();
 
         isAlive = true;
 
         this.screen = screen;
+
+        this.fleeingDuck = fleeingDuck;
 
         this.deadDuck = deadDuck;
 
@@ -118,6 +121,7 @@ abstract class Duck : AnimatedSpriteGameObject
         }
         else if(!isShot)
         {
+            sprite = fleeingDuck;
             Flee();
         }
 
