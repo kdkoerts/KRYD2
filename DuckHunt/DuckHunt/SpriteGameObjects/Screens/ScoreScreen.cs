@@ -14,16 +14,16 @@ using Microsoft.Xna.Framework.Graphics;
 
         Vector2 textPosition;
 
-        public ScoreScreen(Game1 game) : base(game.Content.Load<Texture2D>("score screen"), new Rectangle((int)game.screen.X - 485, (int)game.screen.Y - 140, 200, 120), 1f)
+        public ScoreScreen(Game1 game) : base(game.Content.Load<Texture2D>("score screen"), new Rectangle((int)((game.screen.X - 800)/2) + 820, (int)game.screen.Y - 140, 300, 120), 1f)
     {
             font = game.Content.Load<SpriteFont>("font");
 
-            Round = 0;
+            score = 0;
 
             textPosition = new Vector2(rectangle.X + rectangle.Width * 4 / 10, rectangle.Y + rectangle.Height / 10);
         }
 
-        public int Round
+        /*public int Score
         {
             get { return score; }
             set
@@ -37,7 +37,7 @@ using Microsoft.Xna.Framework.Graphics;
                     score = value;
                 }
             }
-        }
+        }*/
 
         public override void Update(GameTime gameTime)
         {
