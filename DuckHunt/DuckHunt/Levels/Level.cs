@@ -15,6 +15,8 @@ class Level
     protected List<Tree> treeList;
     protected List<Duck> duckList;
 
+    public int score;
+
     public Level(Game1 game)
     {
         this.game = game;
@@ -69,12 +71,18 @@ class Level
         {
             if (duckList.ElementAt<Duck>(i - 1).RemovableDuck)
             {
+                if(duckList.ElementAt<Duck>(i - 1).isShot)
+                {
+                    score += duckList.ElementAt<Duck>(i - 1).value;
+                }
+
                 duckList.RemoveAt(i - 1);
                 removedDucks++;
             }
         }
 
         AddDucks(removedDucks);
+        
     }
 
     public virtual void Draw(SpriteBatch s)

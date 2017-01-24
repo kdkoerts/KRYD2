@@ -58,6 +58,7 @@
     <Compile Include="SpriteGameObjects\Ducks\RedDuck.cs" />
     <Compile Include="SpriteGameObjects\Screens\HitScreen.cs" />
     <Compile Include="SpriteGameObjects\Screens\RoundScreen.cs" />
+    <Compile Include="SpriteGameObjects\Screens\ScoreScreen.cs" />
     <Compile Include="SpriteGameObjects\SpriteGameObject.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
@@ -111,6 +112,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\fallingDuckRed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\score screen.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\usedBullet.png">

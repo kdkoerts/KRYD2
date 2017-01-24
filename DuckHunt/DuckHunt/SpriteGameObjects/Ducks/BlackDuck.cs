@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 class BlackDuck : Duck
 {
     public BlackDuck(Rectangle rectangle, Game1 game, float depth, Vector2 screen) : 
-        base(game.Content.Load<Texture2D>("blackDuckAnimation"), game.Content.Load<Texture2D>("deadDuckBlack"), game.Content.Load<Texture2D>("fallingDuckBlack"),  rectangle, 3, depth, screen)
+        base(game.Content.Load<Texture2D>("blackDuckAnimation"), game.Content.Load<Texture2D>("deadDuckBlack"), game.Content.Load<Texture2D>("fallingDuckBlack"),  rectangle, 3, depth, screen, 500)
     {
         Direction *= 5f;
     }
